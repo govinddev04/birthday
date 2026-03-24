@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🎂 Happy Birthday Meri Bestfriend! 🎂 | Special Birthday Wish + Flirty Vibes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #f9e3b3 0%, #ffb347 100%);
+            font-family: 'Poppins', 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Floating balloons and candles effect */
+        .float-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .balloon {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatBalloon 12s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes floatBalloon {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-20vh) rotate(10deg);
+                opacity: 0;
+            }
+        }
+
+        .candle {
+            position: absolute;
+            font-size: 1.8rem;
+            animation: flicker 0.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { text-shadow: 0 0 2px orange; opacity: 0.8; transform: scale(1);}
+            100% { text-shadow: 0 0 12px #ff8800; opacity: 1; transform: scale(1.05);}
+        }
+
+        /* main card */
+        .card {
+            position: relative;
+            z-index: 10;
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 252, 245, 0.98);
+            backdrop-filter: blur(2px);
+            border-radius: 3rem;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 215, 150, 0.8);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: bouncePop 0.6s cubic-bezier(0.34, 1.2, 0.64, 1);
+        }
+
+        @keyframes bouncePop {
+            0% { opacity: 0; transform: scale(0.9) translateY(30px);}
+            80% { transform: scale(1.02);}
+            100% { opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            word-break: keep-all;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .birthday-badge {
+            background: #ffd966;
+            display: inline-block;
+            border-radius: 60px;
+            padding: 6px 18px;
+            margin-top: 12px;
+            color: #b33b2c;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            padding: 2rem 1.8rem;
+        }
+
+        .wish-section {
+            text-align: center;
+            margin-bottom: 1.8rem;
+        }
+
+        .greeting {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, #ff6a4b, #ffb347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .birthday-message {
+            background: #fff5e6;
+            padding: 1.2rem;
+            border-radius: 2rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #c45c3a;
+            font-weight: 500;
+            box-shadow: inset 0 1px 4px #ffdec2, 0 8px 20px rgba(0, 0, 0, 0.05);
+            border-left: 6px solid #ff9966;
+        }
+
+        .flirty-box {
+            background: #fff0e0;
+            border-radius: 2rem;
+            padding: 1rem 1.5rem;
+            margin: 1.8rem 0;
+        }
+
+        .flirty-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: #e65c3a;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .flirty-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .flirty-card {
+            background: white;
+            border-radius: 60px;
+            padding: 8px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+            color: #c45a38;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #ffc49b;
+        }
+
+        .flirty-card i {
+            font-size: 1rem;
+            color: #ff7e47;
+        }
+
+        .flirty-card:hover {
+            transform: scale(1.05);
+            background: #ff7e47;
+            color: white;
+            border-color: #ff7e47;
+        }
+
+        .flirty-card:hover i {
+            color: white;
+        }
+
+        .response-area {
+            margin-top: 1rem;
+            background: #fffaf2;
+            border-radius: 2rem;
+            padding: 0.9rem;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #b64926;
+            min-height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-top: 2px solid #ffd6a5;
+            transition: all 0.2s;
+        }
+
+        .birthday-surprise {
+            background: linear-gradient(95deg, #ffb347, #ff8c42);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            margin-top: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s;
+            font-family: inherit;
+            box-shadow: 0 8px 20px rgba(255, 100, 30, 0.4);
+        }
+
+        .birthday-surprise:hover {
+            background: linear-gradient(95deg, #ff9f3d, #ff7028);
+            transform: scale(0.98);
+            box-shadow: 0 5px 18px rgba(255, 80, 30, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 0.75rem;
+            color: #b8734a;
+            border-top: 1px solid #ffe0c0;
+            background: #fffaf0;
+        }
+
+        @media (max-width: 480px) {
+            .card { border-radius: 2rem; }
+            .header h1 { font-size: 1.8rem; }
+            .greeting { font-size: 1.7rem; }
+            .flirty-card { padding: 6px 14px; font-size: 0.8rem; }
+        }
+
+        .birthday-cake-icon {
+            font-size: 2.2rem;
+            display: inline-block;
+            animation: wiggle 1s infinite;
+        }
+        @keyframes wiggle {
+            0%,100% { transform: rotate(0deg);}
+            25% { transform: rotate(8deg);}
+            75% { transform: rotate(-8deg);}
+        }
+    </style>
+</head>
+<body>
+
+<div class="float-bg" id="floatContainer"></div>
+
+<div class="card">
+    <div class="header">
+        <div class="birthday-cake-icon">🎂🎉</div>
+        <h1>🎈 Happy Birthday Meri Bestfriend! 🎈</h1>
+        <div class="birthday-badge">
+            <i class="fas fa-crown"></i> Aaj tera special day hai <i class="fas fa-gift"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="wish-section">
+            <div class="greeting">
+                <i class="fas fa-birthday-cake" style="color:#ff8c42;"></i> Happy Birthday to YOU! <i class="fas fa-heart" style="color:#ff4d6d;"></i>
+            </div>
+            <div class="birthday-message">
+                🌟 <strong>Janamdin Mubarak ho meri jaan!</strong> 🌟<br>
+                Tu sirf meri bestfriend nahi, meri khushi ka sabse bada reason hai. Aaj tera din hai aur main chahta/chahti hu tu feel kare kitni special hai tu mere liye. 🥳💖 <br>
+                🎂 <strong>Har khushi ho tere paas, har sapna ho tera apna. Love you bestie!</strong> 🎂
+            </div>
+        </div>
+
+        <!-- Flirty + Birthday Wish Section -->
+        <div class="flirty-box">
+            <div class="flirty-title">
+                <i class="fas fa-comment-dots"></i> 
+                <span>🎁 Flirty Birthday Wishes — Tujhe aur close karne ke liye 🎁</span>
+            </div>
+            <div class="flirty-list" id="flirtyList">
+                <!-- dynamic birthday flirty lines injected -->
+            </div>
+            <div class="response-area" id="responseMessage">
+                💬 Koi bhi flirty birthday wish click kar, main cute reply dunga 😘🎂
+            </div>
+            <button class="birthday-surprise" id="surpriseBtn">
+                <i class="fas fa-champagne-glasses"></i> 🎂 Surprise Birthday Wish! 🎂 <i class="fas fa-star"></i>
+            </button>
+        </div>
+
+        <div class="footer">
+            🌸 Made with <i class="fas fa-heart" style="color:#ff6b4a"></i> for my bestie — Tu hai toh mera birthday bhi special lagta hai! 🌸
+        </div>
+    </div>
+</div>
+
+<script>
+    // ----------------------------------------------
+    // Flirty + Birthday special lines (Hindi + English mix)
+    // ----------------------------------------------
+    const birthdayFlirtyLines = [
+        { text: "Happy Birthday! Tu aur bhi khoobsurat lag rahi/raha hai aaj 😍🎂", emoji: "🎈" },
+        { text: "Tere birthday pe main tujhe wish karu ya apna dil de du? 💘", emoji: "💖" },
+        { text: "Janamdin mubarak ho meri crush bestfriend 💕 ab tu close aa ja", emoji: "🥳" },
+        { text: "Teri smile se bhi zyada sweet tera birthday ho 🍰❤️", emoji: "🍬" },
+        { text: "Aaj tu full birthday queen/king hai, lekin mera dil pehle se tera hai 😉", emoji: "👑" },
+        { text: "Bestfriend se best life partner banne mein kitna time lagta hai? 😏 Happy Birthday!", emoji: "💏" },
+        { text: "Tujhe dekh ke lagta hai birthday gift main khud ban jau? 🎁", emoji: "🤭" },
+        { text: "Teri har wish poori karne ka mann karta hai.. kyunki tu meri wish hai 💫", emoji: "✨" },
+        { text: "Birthday ke din bhi teri cuteness next level 🥺💗", emoji: "🌸" },
+        { text: "I wish main tera birthday gift hota... wrapped with ribbon 🎀😘", emoji: "💋" },
+        { text: "Meri bestfriend ko janamdin mubarak, ab thoda aur close aa jaa 😘", emoji: "🫂" },
+        { text: "Tere saath har din birthday jaisa lagta hai, lekin aaj double masti 🔥", emoji: "🎉" }
+    ];
+
+    // Cute responses for birthday flirty clicks
+    const birthdayResponses = [
+        "Awww 😳 teri baat ne mera birthday aur memorable kar diya 💕",
+        "Arey wah! Itna pyaar? Tu toh mujhe blush karwa diya 🥰❤️",
+        "Yeh wish toh main apne dil me save kar lungi/kar lunga 🫶",
+        "Tera ye flirty style mujhe pagal kar dega 😂💘 Happy wala feel aa raha!",
+        "Bestie + something more? 👀 tu bada smart hai yaar 😏",
+        "Mera birthday special hai kyunki tu hai mere saath 🥺💖",
+        "Itna close aana hai toh aa jao na, dil mein jagah hai ✨",
+        "Tune toh wish karte hi mera din bana diya 😍😍",
+        "Tu itna romantic kyun ho raha/rahi hai? Lakin pasand aaya 🤭",
+        "Birthday pe itna pyaar? Main toh pighal gayi/pighal gaya 🎂❤️"
+    ];
+
+    // Surprise wishes (birthday special + flirty hint)
+    const surpriseBirthdayWishes = [
+        { msg: "🎁 HAPPY BIRTHDAY! Tu mera sabse pyara surprise hai is duniya mein 🎁. Ab aur close aa ja please 🥺💗" },
+        { msg: "🍰 Janamdin mubarak meri jaan! Tu mere liye birthday gift se bhi khaas hai 🍰. Love you bestie ❤️😘" },
+        { msg: "🎈 Aaj tera din hai aur main chahta hu tu meri life mein hamesha rahe. Tu sirf bestfriend nahi, meri home ❤️" },
+        { msg: "💫 Birthday boy/girl special! Tu itni amazing hai na... main tujhe har roz wish kar sakta hu 💫" },
+        { msg: "🌟 Happy Birthday! Tu meri duniya ki sabse beautiful soul hai. Sath me hamesha rehna 🥂✨" },
+        { msg: "💋 Birthday wish list mein pehla number hu main? 😏 Tu close aa jaldi se, tujhe special gift dunga 💋🎁" },
+        { msg: "🥳 Bestfriend se jyada kuch banne ka mann kar raha hai aaj... Happy Birthday cutiepie 🥳💖" },
+        { msg: "🌸 Har candle bujhane ke baad tu meri ek wish lelena... main tera hu hamesha 🌸❤️" }
+    ];
+
+    const flirtyListContainer = document.getElementById('flirtyList');
+    const responseDiv = document.getElementById('responseMessage');
+    const surpriseBtn = document.getElementById('surpriseBtn');
+
+    // Build flirty birthday cards
+    function buildBirthdayFlirtyCards() {
+        flirtyListContainer.innerHTML = '';
+        birthdayFlirtyLines.forEach((line, idx) => {
+            const card = document.createElement('div');
+            card.classList.add('flirty-card');
+            card.innerHTML = `<i class="fas fa-birthday-cake"></i> ${line.text} ${line.emoji}`;
+            card.addEventListener('click', () => {
+                const randomResponse = birthdayResponses[Math.floor(Math.random() * birthdayResponses.length)];
+                responseDiv.innerHTML = `
+                    <div style="display:flex; flex-direction:column; gap:6px; width:100%;">
+                        <div style="background:#ffe3c9; border-radius:40px; padding:6px 12px;">
+                            🎂 <strong>Tune kaha:</strong> "${line.text}"
+                        </div>
+                        <div><i class="fas fa-heart" style="color:#ff6b4a;"></i> <strong>Mera jawab (Bestie ka pyar):</strong> ${randomResponse} 🥳💖</div>
+                    </div>
+                `;
+                createFloatingBirthdayHearts(6);
+                // add mini cake sparkle
+                addSparkleEffect();
+            });
+            flirtyListContainer.appendChild(card);
+        });
+    }
+
+    // Mini floating hearts + candles effect
+    function createFloatingBirthdayHearts(count) {
+        for (let i = 0; i < count; i++) {
+            const heartSpan = document.createElement('div');
+            heartSpan.innerHTML = ['❤️','🧡','💛','💖','🎂','🥳'][Math.floor(Math.random()*6)];
+            heartSpan.style.position = 'fixed';
+            heartSpan.style.left = Math.random() * window.innerWidth + 'px';
+            heartSpan.style.top = window.innerHeight - 60 + 'px';
+            heartSpan.style.fontSize = (Math.random() * 24 + 20) + 'px';
+            heartSpan.style.opacity = '1';
+            heartSpan.style.pointerEvents = 'none';
+            heartSpan.style.zIndex = '9999';
+            heartSpan.style.transition = 'all 2s ease-out';
+            heartSpan.style.transform = 'translateY(0)';
+            document.body.appendChild(heartSpan);
+            requestAnimationFrame(() => {
+                heartSpan.style.transform = `translateY(-${window.innerHeight + 80}px) rotate(10deg)`;
+                heartSpan.style.opacity = '0';
+            });
+            setTimeout(() => {
+                heartSpan.remove();
+            }, 2200);
+        }
+    }
+
+    function addSparkleEffect() {
+        const spark = document.createElement('div');
+        spark.innerHTML = '✨🎂✨';
+        spark.style.position = 'fixed';
+        spark.style.left = (window.innerWidth/2) + 'px';
+        spark.style.top = (window.innerHeight/2) + 'px';
+        spark.style.fontSize = '2rem';
+        spark.style.pointerEvents = 'none';
+        spark.style.zIndex = '9999';
+        spark.style.opacity = '0.9';
+        spark.style.transition = 'all 0.8s ease-out';
+        document.body.appendChild(spark);
+        setTimeout(() => {
+            spark.style.transform = 'scale(2)';
+            spark.style.opacity = '0';
+            setTimeout(() => spark.remove(), 800);
+        }, 30);
+    }
+
+    // surprise button click: special birthday flirty wish
+    surpriseBtn.addEventListener('click', () => {
+        const randomSurprise = surpriseBirthdayWishes[Math.floor(Math.random() * surpriseBirthdayWishes.length)];
+        const extraCakeEmoji = ['🎂','🎈','🎁','💝','🍰','🥳'];
+        const randEmoji = extraCakeEmoji[Math.floor(Math.random() * extraCakeEmoji.length)];
+        responseDiv.innerHTML = `
+            <div style="background: #ffe2b5; padding: 12px; border-radius: 2rem; width:100%;">
+                <i class="fas fa-gift" style="font-size: 1.4rem; color:#ff884d;"></i>
+                <span style="font-weight:800; font-size:1.2rem;"> 🎉 SECRET BIRTHDAY SURPRISE! 🎉</span>
+                <div style="margin-top: 12px; font-size: 1rem;">✨ ${randomSurprise.msg} ✨ ${randEmoji}</div>
+                <div style="margin-top: 8px;"><i class="fas fa-heartbeat"></i> Ab toh aur close aa hi jao... birthday pe special treatment milni chahiye 😘💕</div>
+            </div>
+        `;
+        createFloatingBirthdayHearts(12);
+        // extra balloons & cake effect
+        for (let i=0; i<6; i++) {
+            setTimeout(() => createFloatingBirthdayHearts(2), i*100);
+        }
+        addSparkleEffect();
+        addBirthdayConfettiEffect();
+    });
+
+    // simple confetti like effect using divs
+    function addBirthdayConfettiEffect() {
+        const colors = ['#ffb347', '#ff6b4a', '#ffd966', '#ff8c42', '#ffb3ba'];
+        for (let i = 0; i < 60; i++) {
+            const conf = document.createElement('div');
+            conf.style.position = 'fixed';
+            conf.style.width = '8px';
+            conf.style.height = '12px';
+            conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            conf.style.left = Math.random() * window.innerWidth + 'px';
+            conf.style.top = '-20px';
+            conf.style.opacity = '0.8';
+            conf.style.pointerEvents = 'none';
+            conf.style.zIndex = '10000';
+            conf.style.borderRadius = '30%';
+            conf.style.transform = `rotate(${Math.random() * 360}deg)`;
+            document.body.appendChild(conf);
+            const duration = 1 + Math.random() * 2;
+            const fall = conf.animate([
+                { transform: `translateY(0px) rotate(0deg)`, opacity: 1 },
+                { transform: `translateY(${window.innerHeight + 50}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], { duration: duration * 1000, easing: 'cubic-bezier(0.2,0.9,0.4,1)' });
+            fall.onfinish = () => conf.remove();
+        }
+    }
+
+    // Floating birthday elements (balloons + candles) in background
+    function startBirthdayFloats() {
+        const container = document.getElementById('floatContainer');
+        const items = ['🎈', '🎈', '🎂', '🎉', '🎁', '✨', '🕯️', '🧁', '🎈'];
+        for (let i = 0; i < 28; i++) {
+            const el = document.createElement('div');
+            el.classList.add('balloon');
+            const randomItem = items[Math.floor(Math.random() * items.length)];
+            el.innerHTML = randomItem;
+            el.style.left = Math.random() * 100 + '%';
+            el.style.fontSize = (Math.random() * 28 + 20) + 'px';
+            el.style.animationDuration = Math.random() * 9 + 7 + 's';
+            el.style.animationDelay = Math.random() * 15 + 's';
+            el.style.opacity = Math.random() * 0.5 + 0.3;
+            container.appendChild(el);
+        }
+        // add some candles separately
+        for (let i=0;i<12;i++) {
+            const candleDiv = document.createElement('div');
+            candleDiv.classList.add('candle');
+            candleDiv.innerHTML = '🕯️';
+            candleDiv.style.left = Math.random() * 90 + '%';
+            candleDiv.style.bottom = '0px';
+            candleDiv.style.position = 'absolute';
+            candleDiv.style.fontSize = (Math.random() * 20 + 18)+'px';
+            candleDiv.style.animationDuration = (Math.random() * 0.6 + 0.4)+'s';
+            candleDiv.style.animationDelay = Math.random()*5+'s';
+            container.appendChild(candleDiv);
+        }
+    }
+
+    // Auto-load a nice birthday welcome message with flirty hint
+    window.addEventListener('load', () => {
+        startBirthdayFloats();
+        buildBirthdayFlirtyCards();
+        setTimeout(() => {
+            responseDiv.innerHTML = `
+                <i class="fas fa-cake-candles" style="font-size:1.6rem;"></i>
+                🥳 <strong>HAPPY BIRTHDAY meri bestie!</strong> 🥳<br>
+                Yahan jo bhi <strong>flirty birthday wishes</strong> hain, unhe click kar aur dekh main kaise reply deti/deta hu 😘💖<br>
+                <span style="font-size:0.85rem;">🎂 Tujhe aur close laane ke liye yeh special surprise hai 🎂</span>
+            `;
+        }, 400);
+    });
+
+    // extra effect for overall page click - little sparkles
+    document.body.addEventListener('click', (e) => {
+        if(e.target.closest('.flirty-card') || e.target.closest('#surpriseBtn')) return;
+        const sparkleSpan = document.createElement('div');
+        sparkleSpan.innerHTML = '🎂';
+        sparkleSpan.style.position = 'absolute';
+        sparkleSpan.style.left = e.clientX + 'px';
+        sparkleSpan.style.top = e.clientY + 'px';
+        sparkleSpan.style.fontSize = '22px';
+        sparkleSpan.style.pointerEvents = 'none';
+        sparkleSpan.style.opacity = '0.8';
+        sparkleSpan.style.transition = 'all 0.6s ease';
+        sparkleSpan.style.zIndex = '999';
+        document.body.appendChild(sparkleSpan);
+        setTimeout(() => {
+            sparkleSpan.style.transform = 'translateY(-30px) scale(1.2)';
+            sparkleSpan.style.opacity = '0';
+            setTimeout(() => sparkleSpan.remove(), 600);
+        }, 20);
+    });
+</script>
+</body>
+</html>
